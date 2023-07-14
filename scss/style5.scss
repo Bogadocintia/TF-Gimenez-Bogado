@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --colorTitulos: #ffa500;
+    --colortextos: #ffffff;
+    --colorbotones: #ffa500;
+    --colorfondo: #000;
+    --paddingsecciones: 60px 0;
+    --marginelementos: 40px;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: var(--paddingsecciones);
+}
+
+/* Menu */
+
+.menu-navegacion {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #000;
+}
+
+.logo {
+    height: 100px;
+ img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin-left: 50px;
+}
+}
+.enlaces li {
+    list-style: none;
+    display: inline-block;
+a {
+    text-decoration: none;
+    color: #ffff;
+    padding-left: 15px;
+}
+}
+
+
+@media screen and (max-width:800px) {
+    .menu-navegacion {
+        flex-direction: column;
+        height: 120px;
+        justify-content: space-evenly;
+        margin-top: 1px;
+    }
+}
+
+
+/*main*/
+
+
+main {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/WhatsApp\ Image\ 2023-06-09\ at\ 14.55.10.jpeg);
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorPrincipal {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rosybrown;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+    padding: 30px;
+}
+
+.inputNombre {
+    margin-bottom: 20px;
+}
+
+.inputEmail {
+    margin-bottom: 20px;
+}
+
+.inputPais {
+    margin-bottom: 20px;
+}
+
+.formulario-contacto h1 {
+    margin-bottom: 20px;
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorComentarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rosybrown;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: auto;
+    padding: 30px;
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+}
+ p {
+    margin-bottom: 20px;
+}
+textarea {
+    margin-bottom: 10px;
+}
+}
+
+footer {
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+}
+
+//*Extend*//
+
+.boton {
+	width:200px;
+	height:50px;
+	background-color:white;
+	text-align:center;
+	color:black;
+	border-radius:20px;
+	border:1px solid black;
+}
+
+.boton--aceptar{
+	@extend .boton;
+	background-color: var(--colorbotones);
+	color:white;
+}
+
+.boton--cancelar{
+	@extend .boton;
+	background-color:var(--colorfondo);
+	color:white;
+}
+
+h3{
+    margin: 45%;
+}
